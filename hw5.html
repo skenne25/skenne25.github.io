@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Penguin Page</title>
+    <meta name="description" content="Penguin information">
+</head>
+<body style="background-image:url('watercolor.jpg');background-color:#E5C6F7">
+<header>
+  <h1 style="text-align: center"> Penguin Landing Page </h1>
+</header>
+<section>
+<h2 style="text-align: right; font-style: italic;">Intro to Penguins</h2>
+<p style="text-align: right"> <span style="font-size:150%">P</span>enguins are native to the Southern Hemisphere, so it's unlikely you'll see them in North America.The few stragglers you'll see above the equator will probably be black and white. <br>But penguins aren't all the same color. In fact, there are over 15 species of penguins - with colors ranging from a soft yellow to a light blue.The tallest penguins can reach just below 4 ft and weigh nearly 80 pounds! These larger types of penguins will typically be found in the colder parts of the world because their large body helps protect them from the elements. The smaller species of penguins, as small as one foot (12 inches), however, are found in warmer, tropical parts of the Southern Hemisphere. </p>
+<p> <span style="font-size: 200%">T</span>he food that penguins eat also varies greatly. A penguin's diet is dependent upon its age, location, and species. A staple among all species is food retrieved from the sea. Cold climate penguins may not have access to things like fish as tropical penguins do, so krill makes up a majority of their diet. Tropical penguins eat fish and squids.</p>
+</section>
+<h3>Life of a Penguin</h3>
+<footer style="background-image:url('wallpaper.jpeg'); background-repeat: repeat-x; background-position: top">
+  <strong><p>Penguins are not born and come out looking as their parents do. Before penguins grow into their signature, or not, look, they have to go through a couple of stages. No matter the species of penguin, they all go through the same stages. Stages aren't unique, but the signs of a new stage are sometimes different. For example, a Little penguin from New Zealand will have much less growth than an Emperor penguin.The two will also exhibit different colors as they progress through the stages. So even though the stages look different, they are the same with different physical effects.</p></strong>
+  <p>If penguins are not held in captivity, they can live for about 20 years. There are some exceptions - bigger penguins have been reported to live up to 30, and smaller penguins can live as little as 6 years. In their lives, penguins will go through five stages. They begin as simply in the egg stage. After hatching they reach the hatchling stage. Then, they find themselves as a chick.The two longest stages follow in order - juvenile and adult.</p>
+  <p>Penguin species also vary in how many eggs they lay each year. A good amount of species consistently lay 2 eggs a year, but there are some that lay 1 or 3.Believe it or not smaller penguins are usually the ones who lay more eggs on average than bigger penguin species.</p>
+  <p>The better known penguins, for example the Emperor and King penguins, usually only lay 1 egg. In instances where a penguin is laying more than 1 egg, they are not laid at the same time. Egg laying is spaced out between a couple of days. The typical timeframe penguins wait to lay another egg is between 24 hours to 48 hours, or 1 to 2 days. </p>
+  <p> Because this process is so tedious and requires much effort from both the mother and father, each typically has a specific role in the process. Males eat a ton a bit before an egg is laid. They are the ones who warm the egg for a couple months after it is laid. The mother, ater laying the egg, is the one to go out while the father is guarding the eggs. The mother gets food for herself and the father during these months. </p>
+  <p>Immediately after this paragraph, you'll find a countdown to World Penguin Day! This countdown is possible because I used a Javascript code, the Annual Occasions Countdown Script, that uses math to count down the dates to a given date. Depending on the day, the script either displays a message nottifying the visitor how many days there until the day (in this case, April 25 each year) or it tells them that it is World Penguin Day.</p><br>
+    <script>
+var today=new Date()
+
+//Enter the occasion's MONTH (1-12) and DAY (1-31):
+var theoccasion=new Date(today.getFullYear(), 04, 25)
+
+//Customize text to show before and on occasion. Follow grammer below:
+var beforeOccasionText="left until World Penguin Day"
+var onOccasiontext="Today is World Penguin Day!"
+
+var monthtext=new Array("Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec")
+theoccasion.setMonth(theoccasion.getMonth()-1) //change to 0-11 month format
+var showdate="("+monthtext[theoccasion.getMonth()]+" "+theoccasion.getDate()+")" //show date of occasion
+
+var one_day=1000*60*60*24
+var calculatediff=""
+
+calculatediff=Math.ceil((theoccasion.getTime()-today.getTime())/(one_day))
+if (calculatediff<0){ //if bday already passed
+var nextyeartoday=new Date()
+nextyeartoday.setFullYear(today.getFullYear()+1)
+calculatediff=Math.ceil((nextyeartoday.getTime()-today.getTime())/(one_day)+calculatediff)
+}
+
+//Display message accordingly
+var pluraldayornot=(calculatediff==1)? "day" : "days"
+if (calculatediff>0)
+	document.write("<b>"+calculatediff+" "+pluraldayornot+" "+beforeOccasionText+" "+showdate+"!</b>")
+else if (calculatediff==0)
+	document.write("<b>"+onOccasiontext+" "+showdate+"!</b>")
+</script>
+     <form>
+       <h2><strong>Sign up for more penguin info!</strong></h2>
+    <label for ="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+    <label for = "email"> Email</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="quantity">Age</label><br>
+    <input type="number" id="quantity" name="quantity" min="10" max="99">
+     </form>
+      </footer>
+        </body>
+         </html>
